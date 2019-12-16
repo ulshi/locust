@@ -28,6 +28,7 @@ deploy:
     provider: pypi
     user: $TWINE_USERNAME
     password: $TWINE_PASSWORD
+    skip_existing: true
     on:
         # tags: true
         all_branches: true
