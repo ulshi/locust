@@ -24,3 +24,8 @@ script:
   - tox
 after_success:
   - codecov -e TOXENV
+deploy:
+    provider: pypi
+    on:
+        # tags: true
+        all_branches: true
