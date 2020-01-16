@@ -12,7 +12,7 @@ COPY --from=builder /usr/local/lib/python3.6/site-packages /usr/local/lib/python
 COPY --from=builder /usr/local/bin/locust /usr/local/bin/locust
 COPY docker_start2.sh docker_start2.sh
 COPY locustfile.py locustfile.py
-RUN chmod +x docker_start.sh
+RUN chmod +x docker_start2.sh
 
 EXPOSE 8089 5557 5558
 
