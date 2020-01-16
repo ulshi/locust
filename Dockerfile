@@ -16,4 +16,4 @@ RUN chmod +x docker_start.sh
 EXPOSE 8089 5557 5558
 
 USER locust
-ENTRYPOINT ["./docker_start.sh"]
+ENTRYPOINT ["./docker_start2.sh"]
