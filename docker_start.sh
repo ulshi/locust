@@ -3,10 +3,13 @@
 if [ -z "${TARGET_TASK}" ]; then
   echo "ERROR: TARGET_TASK not configured" >&2
   exit 1
+elif 1; then
+  echo "TARGET_TASK set properly" >&2
 fi
 
 LOCUST_MODE="${LOCUST_MODE:=standalone}"
 _LOCUST_OPTS="-f ${LOCUSTFILE_PATH:-/locustfile.py} ${TARGET_TASK}"
+echo ${_LOCUST_OPTS} >&2
 
 if [ "${LOCUST_MODE}" = "master" ]; then
     _LOCUST_OPTS="${_LOCUST_OPTS} --master"
