@@ -6,7 +6,7 @@
 #fi
 
 if [ -z "${TARGET_TASK}" ]; then
-  echo "ERROR: TARGET_URL not configured" >&2
+  echo "ERROR: TARGET_TASK not configured" >&2
   exit 1
 fi
 
