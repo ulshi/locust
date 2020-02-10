@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
 if [ -z "${TARGET_TASK}" ]; then
-  echo "ERROR: TARGET_TASK not configured" >&2
+  echo "TARGET_TASK not configured" >&2
   exit 1
-elif 1; then
+else
   echo "TARGET_TASK set properly" >&2
 fi
 
