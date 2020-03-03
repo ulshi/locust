@@ -20,10 +20,10 @@ class WebsiteTasks(TaskSet):
             "osVersion": "Win10/64"                                                                                                   
         })
         
-        response = self.client.post(url= loginUrl,
-                                       data = data,
-                                       headers = None)
-        print("LOGIN RESULT:", response.status_code, response.content)
+        response = self.client.post(url= loginUrl,{
+            "u": "egova",                                               
+            "p": "+G0+zDMNG3UlrBx3A2AGOg=="
+        })
  
 
 class WebsiteUser(HttpLocust):
