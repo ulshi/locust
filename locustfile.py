@@ -20,7 +20,7 @@ class WebsiteTasks(TaskSet):
             "osVersion": "Win10/64"                                                                                                   
         })
         
-        response = self.client.post(url= loginUrl,{
+        response = self.client.post("/eUrbanMIS/login/validpassword",{
             "u": "egova",                                               
             "p": "+G0+zDMNG3UlrBx3A2AGOg=="
         })
