@@ -21,7 +21,7 @@ class WebsiteTasks(TaskSet):
             "subCityCode": ""                                                                                                   
         })
         
-        response = self.client.request(method="POST", url= loginUrl,
+        response = self.client.post(url= loginUrl,
                                        data = data,
                                        headers = None)
         print("LOGIN RESULT:", response.status_code, response.content)
