@@ -8,24 +8,15 @@ class WebsiteTasks(TaskSet):
 
     @task(10)
     def index(self):
-        self.client.get("http://10.0.1.167:30051/2020/02/12/feiyan1/")
-        
-    @task(10)
-    def on_start(self):
-        data = json.dumps({
-            "u": "egova",                                               
-            "p": "+G0+zDMNG3UlrBx3A2AGOg==",                                                      
-            "ip": "",                                                          
-            "browserVersion": "chrome/78.0.3904.108",                                                                                                    
-            "osVersion": "Win10/64"                                                                                                   
-        })
-        
-        response = self.client.post("/eUrbanMIS/login/validpassword",{
-            "u": "egova",                                               
-            "p": "+G0+zDMNG3UlrBx3A2AGOg=="
-        })
- 
+        self.client.post("http://ln3jd7py4cb0tr4r.zhutingxue.ap-southeast-3.huaweicse.com/ui/rest/userservice/registe",{
+            "telNum": "5768578",
+            "user": "675478"   
+        })      
 
+    @task(10)
+    def index(self):
+        self.client.get("http://ln3jd7py4cb0tr4r.zhutingxue.ap-southeast-3.huaweicse.com/weathermapweb/ui/fusionweatherdata?city=Shenzhen")       
+        
 class WebsiteUser(HttpLocust):
     task_set = WebsiteTasks
     host = host
